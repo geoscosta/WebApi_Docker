@@ -1,0 +1,39 @@
+services:
+  webapi:
+    build:
+      context: /Users/geovane/Library/Mobile Documents/com~apple~CloudDocs/Documents/Course
+        Dev/WebApi_Docker/WebAPI
+      dockerfile: ./Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: WebAPI
+      target: base
+    container_name: WebAPI
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ASPNETCORE_URLS: https://+:443;http://+:80
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: ''
+    image: webapi:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/bin/Debug/net5.0/WebAPI.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - target: 80
+    - target: 443
+    tty: true
+    volumes:
+    - /Users/geovane/Library/Mobile Documents/com~apple~CloudDocs/Documents/Course
+      Dev/WebApi_Docker/WebAPI:/app:rw
+    - /Users/geovane/vsdbg/vs2017u5:/remote_debugger:rw
+    - /Users/geovane/.aspnet/https:/root/.aspnet/https:ro
+    - /Users/geovane/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+    - /Users/geovane/.nuget/packages:/root/.nuget/packages:ro
+    - /Users/geovane/Library/Mobile Documents/com~apple~CloudDocs/Documents/Course
+      Dev/WebApi_Docker/WebAPI:/src:rw
+version: '3.4'

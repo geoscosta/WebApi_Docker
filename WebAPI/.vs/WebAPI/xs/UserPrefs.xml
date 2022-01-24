@@ -1,16 +1,25 @@
-﻿<Properties StartupConfiguration="{F8E8F555-7C58-45AC-A710-1D749E09C5D1}|Default">
+﻿<Properties StartupConfiguration="{0F1BE8BB-886E-41D7-826F-3CA2EADB91C2}|Default">
   <MonoDevelop.Ide.ItemProperties.WebAPI PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Dockerfile">
+    <Files>
+      <File FileName="Dockerfile" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="WebAPI" selected="True" />
+          <Node name="WebAPI" expanded="True">
+            <Node name="docker-compose" expanded="True" />
+            <Node name="WebAPI" expanded="True">
+              <Node name="Dockerfile" selected="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

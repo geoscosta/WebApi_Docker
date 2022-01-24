@@ -1,0 +1,17 @@
+services:
+  webapi:
+    build:
+      context: /Users/geovane/Library/Mobile Documents/com~apple~CloudDocs/Documents/Course
+        Dev/WebApi_Docker/WebAPI
+      dockerfile: ./Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: webapi
+    ports:
+    - target: 80
+    - target: 443
+    volumes:
+    - /Users/geovane/.aspnet/https:/root/.aspnet/https:ro
+    - /Users/geovane/.microsoft/usersecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'
