@@ -3,6 +3,20 @@ version: '3.4'
 services:
   webapi:
     image: ${DOCKER_REGISTRY-}webapi
+    networks:
+      - webapi
     build:
       context: .
       dockerfile: ./Dockerfile
+
+  nginx:
+    image: nginx:1.21.6-alpine
+    networks:
+      - webapi
+    ports:
+      - 80:80
+    volumes:
+      - ${PWD}/nginx/nginx.conf:/etc/nginx/conf/default.conf
+
+networks:
+  webapi:

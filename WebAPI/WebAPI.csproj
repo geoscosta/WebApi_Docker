@@ -8,8 +8,10 @@
 
   <ItemGroup>
     <None Remove="Model\" />
+    <None Remove="nginx\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
+    <Folder Include="nginx\" />
   </ItemGroup>
 </Project>
