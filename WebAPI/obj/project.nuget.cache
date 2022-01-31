@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ZiYys6D/S7nMESzZk93VREFlR7KoMxk4gVWBhj8aeD8FZKg/ADkvCQNTJh/oYghOeDnSqzp2skaa9WgaggFn5A==",
+  "dgSpecHash": "xHt46LJFu70al2hRnN57MEq75VtPH5KGssU4MJ9XcY5uJnqaK/AXGNu4tUSTNxSTbUYHZt9SKf4ktWNFm4L2qA==",
   "success": true,
-  "projectFilePath": "/Users/geovane/Library/Mobile Documents/com~apple~CloudDocs/Documents/Course Dev/WebApi_Docker/WebAPI/WebAPI.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\geovane.costa\\source\\repos\\WebApi_Docker\\WebAPI\\WebAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\geovane.costa\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
+  ],
   "logs": []
 }
